@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './Components/Footer/Footer'
 import GetStarted from './Components/GetStarted/GetStarted'
 import Hero from './Components/Hero/Hero'
 import Navbar from './Components/Navbar/Navbar'
@@ -19,6 +20,7 @@ function App() {
 
         <GetStarted></GetStarted>
         <SimpleTransparentSection></SimpleTransparentSection>
+        <Footer></Footer>
 
       </div>
 
