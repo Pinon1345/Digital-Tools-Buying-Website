@@ -49,7 +49,7 @@ const Navbar = () => {
                         {/* Shopping Cart */}
 
                         <button className="hidden lg:flex items-center gap-2 px-2 py-2 rounded-lg hover:bg-gray-100 transform transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-md">
-                            <HiShoppingCart className="w-5 h-5"></HiShoppingCart>
+                            <HiShoppingCart className="w-6 h-6 text-[#4F39F6]"></HiShoppingCart>
                         </button>
 
                         <a className="hidden lg:flex items-center font-semibold cursor-pointer">Login</a>
