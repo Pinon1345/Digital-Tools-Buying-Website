@@ -33,6 +33,40 @@
   transform: scale(0.95);
 }
 
+/* Another Primary Reusable Button */
+
+.btn-primary-another {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+
+  background: linear-gradient(to right, #4F39F6, #9514FA);
+  border: none;
+  border-radius: 25px;
+
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect (jump + darker gradient) */
+.btn-primary:hover {
+  background: linear-gradient(to right, #4F39F6, #9514FA);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Click effect */
+.btn-primary:active {
+  transform: scale(0.95);
+}
 
 /* Another Reusable Button */
 
@@ -47,7 +81,7 @@
   font-weight: 500;
   color: #9514FA;
 
-  background: whitesmoke ;
+  background: whitesmoke;
   border: none;
   border-radius: 10px;
 

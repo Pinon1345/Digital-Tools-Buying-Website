@@ -1,5 +1,7 @@
 
+import { useState } from 'react'
 import './App.css'
+import Cart from './Components/Cart'
 import Footer from './Components/Footer/Footer'
 import GetStarted from './Components/GetStarted/GetStarted'
 import Hero from './Components/Hero/Hero'
@@ -19,6 +21,12 @@ const toolPromise = getTools()
 
 function App() {
 
+  const [activeTab, setActiveTab] = useState("Product");
+  console.log(activeTab);
+
+  const [carts, setCarts] = useState([]);
+  console.log(carts);
+
 
   return (
     <>
@@ -30,7 +38,33 @@ function App() {
 
         {/* Main Section */}
 
-          <Tools toolPromise={toolPromise}></Tools>
+
+        <div className="mb-4 mt-2">
+
+          <div className="flex justify-center">
+            <div className="flex gap-2 bg-white/30 backdrop-blur-md p-2 rounded-full shadow-lg">
+
+              {/* name of each tab group should be unique */}
+
+              <div className="tabs tabs-box rounded-full font-bold">
+                <input type="radio" name="my_tabs_1" className="tab rounded-2xl w-40" aria-label="Products" defaultChecked
+                  onClick={() => setActiveTab("Product")}
+                />
+
+                <input type="radio" name="my_tabs_1" className="tab rounded-2xl w-40" aria-label="Cart (2)"
+                  onClick={() => setActiveTab("Cart")}
+                />
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        {activeTab === "Product" && <Tools toolPromise={toolPromise} carts={carts} setCarts={setCarts}></Tools>}
+
+        {activeTab === "Cart" && <Cart carts={carts}></Cart>}
 
 
         <GetStarted></GetStarted>
