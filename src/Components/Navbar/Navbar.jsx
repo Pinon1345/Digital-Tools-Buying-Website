@@ -5,9 +5,11 @@ import navImg from "../../assets/others/DigiTools.png"
 
 const Navbar = () => {
     return (
+        <div className=" sticky top-0 z-50 bg-white shadow-md">
+
         <div className="flex items-center">
 
-            <div className="navbar bg-base-150 shadow-sm px-8 sticky">
+            <div className="navbar bg-base-150 shadow-sm px-8">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -16,9 +18,9 @@ const Navbar = () => {
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                                <div>
-                                    <button className="btn sm:btn-sm md:btn-md btn-primary mb-3">Login</button>
-                                </div>
+                            <div>
+                                <button className="btn sm:btn-sm md:btn-md btn-primary mb-3">Login</button>
+                            </div>
                             <li><a>Products</a></li>
                             <li><a>Features</a></li>
                             <li><a>Pricing</a></li>
@@ -55,6 +57,8 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+
+        </div>
 
         </div>
 
