@@ -1,3 +1,5 @@
+/* Reusable Button */
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -11,7 +13,7 @@
 
   background: linear-gradient(to right, #4F39F6, #9514FA);
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
 
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
@@ -31,6 +33,41 @@
   transform: scale(0.95);
 }
 
+
+/* Another Reusable Button */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9514FA;
+
+  background: whitesmoke ;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect (jump + darker gradient) */
+.btn-secondary:hover {
+  background: rgba(245, 245, 245, 0.39);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Click effect */
+.btn-secondary:active {
+  transform: scale(0.95);
+}
 
 
 

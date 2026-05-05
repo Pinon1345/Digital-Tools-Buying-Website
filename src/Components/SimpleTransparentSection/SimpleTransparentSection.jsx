@@ -87,7 +87,7 @@ const SimpleTransparentSection = () => {
                                     </li>
                                 </ul>
                                 <div className="mt-8">
-                                    <button className="btn-soft btn-primary border-2 btn-block">Start Pro Trial</button>
+                                    <button className="btn btn-secondary btn-block">Start Pro Trial</button>
                                 </div>
                             </div>
                         </div>

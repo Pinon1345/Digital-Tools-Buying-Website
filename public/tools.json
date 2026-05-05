@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "ProResume Builder",
+        "description": "Create professional resumes with ATS-friendly templates.",
+        "image": "https://i.ibb.co.com/rRQtHYvm/image-1.jpg",
+        "price": 9.99,
+        "period": "Monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "100+ templates",
+            "ATS optimization",
+            "Export to PDF"
+        ],
+        "icon": "FaFileAlt"
+    },
+    {
+        "id": 2,
+        "name": "DesignMaster UI Kit",
+        "description": "All-in-one UI kit for designers and developers.",
+        "image": "https://i.ibb.co.com/dwfGKcm8/another-image.jpg",
+        "price": 29.99,
+        "period": "One-time",
+        "tag": "Best seller",
+        "tagType": "best",
+        "features": [
+            "500+ components",
+            "Figma support",
+            "Lifetime updates"
+        ],
+        "icon": "FaPaintBrush"
+    },
+    {
+        "id": 3,
+        "name": "SEO Booster Tool",
+        "description": "Improve your website ranking with smart SEO tools.",
+        "image": "https://i.ibb.co.com/23GQYGPq/another-3.jpg",
+        "price": 14.99,
+        "period": "Monthly",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "Keyword research",
+            "Site audit",
+            "Competitor analysis"
+        ],
+        "icon": "FaSearch"
+    },
+    {
+        "id": 4,
+        "name": "Social Media Scheduler",
+        "description": "Schedule and manage posts across all platforms.",
+        "image": "https://i.ibb.co.com/Q3MJF6x1/another-2.jpg",
+        "price": 19.99,
+        "period": "Monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "Auto posting",
+            "Analytics",
+            "Multi-platform support"
+        ],
+        "icon": "FaCalendarAlt"
+    },
+    {
+        "id": 5,
+        "name": "CodeSnippet Pro",
+        "description": "Save and organize reusable code snippets easily.",
+        "image": "https://i.ibb.co.com/8qDQHBh/image-3.png",
+        "price": 12.99,
+        "period": "Yearly",
+        "tag": "Best seller",
+        "tagType": "best",
+        "features": [
+            "Syntax highlight",
+            "Cloud sync",
+            "Team sharing"
+        ],
+        "icon": "FaCode"
+    },
+    {
+        "id": 6,
+        "name": "Email Marketing Suite",
+        "description": "Create and send professional email campaigns.",
+        "image": "https://i.ibb.co.com/nq3mnkPm/image-4.jpg",
+        "price": 24.99,
+        "period": "Monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "Drag & drop editor",
+            "Automation",
+            "Analytics"
+        ],
+        "icon": "FaEnvelope"
+    },
+    {
+        "id": 7,
+        "name": "Cloud Storage X",
+        "description": "Secure cloud storage for your files and backups.",
+        "image": "https://i.ibb.co.com/SwRYXBgQ/image-5.jpg",
+        "price": 49.99,
+        "period": "Yearly",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "1TB storage",
+            "Secure backup",
+            "File sharing"
+        ],
+        "icon": "FaCloud"
+    },
+    {
+        "id": 8,
+        "name": "AI Content Writer",
+        "description": "Generate high-quality content using AI.",
+        "image": "https://i.ibb.co.com/n81J3g9y/image-6.png",
+        "price": 19.99,
+        "period": "Monthly",
+        "tag": "Best seller",
+        "tagType": "best",
+        "features": [
+            "Blog writing",
+            "SEO optimization",
+            "Fast generation"
+        ],
+        "icon": "FaRobot"
+    },
+    {
+        "id": 9,
+        "name": "Video Editor Pro",
+        "description": "Edit videos with powerful and easy tools.",
+        "image": "https://i.ibb.co.com/Zp6RKxZ7/another-4.jpg",
+        "price": 59.99,
+        "period": "One-time",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "4K editing",
+            "Effects library",
+            "Fast rendering"
+        ],
+        "icon": "FaVideo"
+    },
+    {
+        "id": 10,
+        "name": "Project Manager Tool",
+        "description": "Manage tasks and team projects efficiently.",
+        "image": "https://i.ibb.co.com/5gX0dfT3/image-8.jpg",
+        "price": 15.99,
+        "period": "Monthly",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "Task tracking",
+            "Team collaboration",
+            "Dashboard view"
+        ],
+        "icon": "FaTasks"
+    }
+]
