@@ -12,7 +12,7 @@ import Tools from './Components/Tools/Tools'
 
 
 const getTools = async () => {
-  const response = await fetch("/public/tools.json")
+  const response = await fetch("/tools.json")
   return response.json();
 
 }
@@ -51,7 +51,7 @@ function App() {
                   onClick={() => setActiveTab("Product")}
                 />
 
-                <input type="radio" name="my_tabs_1" className="tab rounded-2xl w-40" aria-label="Cart (2)"
+                <input type="radio" name="my_tabs_1" className="tab rounded-2xl w-40" aria-label={`Cart (${carts.length})`}
                   onClick={() => setActiveTab("Cart")}
                 />
               </div>
@@ -64,7 +64,7 @@ function App() {
 
         {activeTab === "Product" && <Tools toolPromise={toolPromise} carts={carts} setCarts={setCarts}></Tools>}
 
-        {activeTab === "Cart" && <Cart carts={carts}></Cart>}
+        {activeTab === "Cart" && <Cart carts={carts} setCarts={setCarts}></Cart>}
 
 
         <GetStarted></GetStarted>

@@ -1,14 +1,24 @@
 // import React from 'react';
 
 import { useState } from "react";
+import { FaCheck } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-const ToolCard = ({tool, carts, setCarts}) => {
+const ToolCard = ({ tool, carts, setCarts }) => {
 
-    const [isBuyNow, setIsBuyNow] = useState (false);
+    const [isBuyNow, setIsBuyNow] = useState(false);
 
     const handleBuyNow = () => {
-        setIsBuyNow (true);
-        setCarts ([...carts, tool]);
+        setIsBuyNow(true);
+
+        const isFound = carts.find(item => item.id === tool.id)
+        if (isFound) {
+            toast.error ("Item Already Added!")
+            return
+        }
+
+        setCarts([...carts, tool])
+        toast.success("Item Added To Cart")
     }
 
     return (
@@ -48,7 +58,21 @@ const ToolCard = ({tool, carts, setCarts}) => {
                     </ul>
                     <div className="mt-6">
                         <button onClick={handleBuyNow} className="btn btn-primary btn-block">
-                            {isBuyNow ? "Added to cart" : "Buy Now"}
+                            {isBuyNow 
+
+                            ? 
+                            <>
+                            <div className="flex justify-center items-center gap-2">
+                                <FaCheck className="text-green-400"></FaCheck> <h2>Added to cart</h2>
+                            </div>
+                            
+                            </>
+
+                             
+
+                            : 
+
+                            "Buy Now"}
                         </button>
                     </div>
                 </div>

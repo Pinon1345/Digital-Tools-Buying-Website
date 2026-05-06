@@ -1,9 +1,23 @@
 // import React from 'react';
 
-const Cart = ({ carts }) => {
+import { TbMoodEmptyFilled } from "react-icons/tb";
+import { toast } from "react-toastify";
+
+const Cart = ({ carts, setCarts }) => {
     console.log(carts)
 
-    const totalPrice = carts.reduce ((sum, item) => sum + item.price, 0);
+    const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
+
+    const handlePayment = () => {
+        setCarts([])
+        toast.success ("Payment Successful!")
+    }
+
+    const handleDelete = (item) => {
+        const filteredArray = carts.filter (c => c.id !== item.id)
+        setCarts (filteredArray);
+        toast.error("Item Deleted From Cart")
+    }
 
 
     return (
@@ -15,42 +29,64 @@ const Cart = ({ carts }) => {
 
             <div className="border border-gray-200 rounded-xl w-11/12 mx-auto mt-3 mb-10 p-4 shadow-xl">
                 <h2 className="text-2xl font-black">Your Cart</h2>
-                <div>
-
-                </div>
 
                 {
-                    carts.map(item =>
-                        <div key={item.id}>
-                            <div className="bg-[#F9FAFC] rounded-xl p-4 flex justify-between items-center mt-4 mb-6 shadow">
+                    carts.length === 0 ?
+                        <>
 
-                                <div className="flex gap-3 items-center">
-                                    <div className="w-16 h-16 p-1 bg-linear-to-r from-[#4f39f673] to-[#9614fa52] rounded-full mt-4">
+                        <div className="py-15 flex flex-row gap-3 items-center justify-center">
+                            <TbMoodEmptyFilled className="w-10 h-10 text-gray-300"></TbMoodEmptyFilled>
+                            <p className="font-bold text-3xl text-gray-500 text-center">
+                                Your Cart Is Empty
+                            </p>
 
-                                        <img className="object-cover rounded-full w-full h-full" src={item.image} alt="" />
+                        </div>
 
-                                    </div>
+                        </>
 
-                                    <div>
-                                        <h2 className="text-2xl pt-2 font-bold">{item.name}</h2>
-                                        <p className="text-lg text-gray-600">${item.price}</p>
-                                    </div>
+                        :
+
+                        <>
+
+                            {
+                                carts.map(item =>
+                                    <div key={item.id}>
+                                        <div className="bg-[#F9FAFC] rounded-xl p-4 flex justify-between items-center mt-4 mb-6 shadow">
+
+                                            <div className="flex gap-3 items-center">
+                                                <div className="w-16 h-16 p-1 bg-linear-to-r from-[#4f39f673] to-[#9614fa52] rounded-full mt-4">
+
+                                                    <img className="object-cover rounded-full w-full h-full" src={item.image} alt="" />
+
+                                                </div>
+
+                                                <div>
+                                                    <h2 className="text-2xl pt-2 font-bold">{item.name}</h2>
+                                                    <p className="text-lg text-gray-600">${item.price}</p>
+                                                </div>
+
+                                            </div>
+                                            <button onClick={() => handleDelete (item)} className="btn btn-soft btn-error">Remove</button>
+
+                                        </div>
+
+
+                                    </div>)
+                            }
+
+                            <div>
+                                <div className="flex justify-between items-center gap-4 pt-6 pb-5">
+                                    <h2 className="font-bold text-xl text-gray-500 pl-6">Total</h2>
+                                    <h2 className="font-extrabold text-2xl pr-6">${totalPrice}</h2>
                                 </div>
-                                <button className="btn btn-soft btn-error">Remove</button>
 
+                                <button onClick={handlePayment} className="btn btn-primary btn-block mb-4">Proceed to Checkout</button>
                             </div>
 
+                        </>
 
-                        </div>)
                 }
 
-                <div>
-                    <div className="flex justify-between items-center gap-4 pt-6 pb-5">
-                        <h2 className="font-bold text-xl text-gray-500 pl-6">Total</h2>
-                        <h2 className="font-extrabold text-2xl pr-6">${totalPrice}</h2>
-                    </div>
-                    <button className="btn btn-primary btn-block mb-4">Proceed to Checkout</button>
-                </div>
 
             </div>
 
